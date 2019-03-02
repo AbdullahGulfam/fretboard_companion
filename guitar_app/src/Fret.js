@@ -7,17 +7,17 @@ export class Fret extends Component {
 
     render() {
         return (
-        <div>
-            
-        </div>
+            <div>
+                { this.getFretNote() }
+            </div>
         )
     }
 
     getFretNote() {
         const notes = ['a','a#','b','c','c#','d','d#','e','f','f#','g','g#']
-        var index = this.props.stringTuning + this.props.fretNumber;
+        let index = notes.indexOf(this.props.stringTuning) + this.props.fretNumber;
 
-        return notes[(index % notes.length)];
+        return notes[index % notes.length];
     }
 }
 
