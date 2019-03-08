@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import './CSS/Fretboard.css'
 
 export class Fretboard extends Component {
-    constructor() {
+    constructor(props) {
         super(props);
     }
 
     render() {
         return (
-        <div>
-            
+        <div class="fretboard">
+    
         </div>
         )
     }

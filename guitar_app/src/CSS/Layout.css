@@ -1,0 +1,11 @@
+body {
+	background: #e5ffe5;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 5px;
+}
+
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 40px;
+}

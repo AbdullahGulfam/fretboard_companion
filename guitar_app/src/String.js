@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './CSS/String.css'
 
 export class String extends Component {
     constructor(props)
@@ -8,13 +9,22 @@ export class String extends Component {
     render() {
         return (
         <div>
-            {this.props.stringNumber} : {this.props.stringTuning}
+            <li></li>
         </div>
         )
     }
 
-    getStringTuning() {
-        return this.props.stringTuning;
+    getStringNotes() {
+        const notes = ['a','a#','b','c','c#','d','d#','e','f','f#','g','g#'];
+        let stringNotes = [this.props.stringTuning];
+
+        let i = notes.indexOf(this.props.stringTuning) + 1;
+        while (stringNotes.length < 11) {
+            stringNotes.push(notes[i % notes.length]);
+            i++;
+        }
+
+        return stringNotes;
     }
 }
 

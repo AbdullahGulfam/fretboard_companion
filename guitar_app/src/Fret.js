@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './CSS/Fret.css';
 
 export class Fret extends Component {
     constructor(props) {
@@ -8,7 +9,7 @@ export class Fret extends Component {
     render() {
         return (
             <div>
-                { this.getFretNote() }
+               <li></li>
             </div>
         )
     }
