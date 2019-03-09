@@ -4,3 +4,4 @@ guitar_app/README.md
 guitar_app/public/manifest.json
 guitar_app/public/index.html
 guitar_app/package.json
+*.json
