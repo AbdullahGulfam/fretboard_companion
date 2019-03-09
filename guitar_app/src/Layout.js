@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Fretboard from './Fretboard'
+import String from './String'
 import './CSS/Layout.css'
 
 export class Layout extends Component {
@@ -7,7 +8,16 @@ export class Layout extends Component {
         return (
             <div>
                 <h1>Guitar Fretboard</h1>
-                <Fretboard />     
+                <Fretboard /> 
+                    
+                <ul class="strings">
+                    <String />
+                    <String />
+                    <String />
+                    <String />
+                    <String />
+                    <String />
+                </ul>
             </div>
         )
     }

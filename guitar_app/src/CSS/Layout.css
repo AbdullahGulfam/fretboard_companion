@@ -1,3 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
 body {
 	background: #e5ffe5;
     font-family: 'Arial', sans-serif;
@@ -9,3 +15,25 @@ h1 {
 	text-align: center;
 	margin-top: 40px;
 }
+
+.strings {
+	position: absolute;
+	margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+	height: 240px;
+	z-index: 1;
+}
+
+li {
+	height: 1px;
+	margin-top: 10px;
+}
+li:nth-child(2) {height: 2px;}
+li:nth-child(3) {height: 3px;}
+li:nth-child(4) {height: 4px;}
+li:nth-child(5) {height: 5px;}
+li:nth-child(6) {height: 6px;}
+
+

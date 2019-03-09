@@ -8,9 +8,7 @@ export class String extends Component {
     }
     render() {
         return (
-        <div>
             <li></li>
-        </div>
         )
     }
 
