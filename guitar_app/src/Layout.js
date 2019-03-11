@@ -6,7 +6,7 @@ import './CSS/Layout.css'
 export class Layout extends Component {
     render() {
         return (
-            <div>
+            <div class="center">
                 <h1>Guitar Fretboard</h1>
                 <Fretboard /> 
                     
