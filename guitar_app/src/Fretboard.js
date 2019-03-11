@@ -9,7 +9,18 @@ export class Fretboard extends Component {
     render() {
         return (
         <div class="fretboard">
-    
+            <div class="first"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
         )
     }
