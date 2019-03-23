@@ -11,12 +11,12 @@ export class Layout extends Component {
                 <Fretboard /> 
                     
                 <ul class="strings">
-                    <String />
-                    <String />
-                    <String />
-                    <String />
-                    <String />
-                    <String />
+                    <String stringTuning = 'e'/>
+                    <String stringTuning = 'a'/>
+                    <String stringTuning = 'd'/>
+                    <String stringTuning = 'g'/>
+                    <String stringTuning = 'b'/>
+                    <String stringTuning = 'e'/>
                 </ul>
             </div>
         )
