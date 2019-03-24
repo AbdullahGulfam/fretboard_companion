@@ -8,7 +8,19 @@ export class String extends Component {
     }
     render() {
         return (
-            <li></li>
+            <div class="string">
+                <div id="note"></div>
+                <div id="note"></div>
+                <div id="note"></div>
+                <div id="note"></div>
+                <div id="note"></div>
+                <div id="note"></div>
+                <div id="note"></div>
+                <div id="note"></div>
+                <div id="note"></div>
+                <div id="note"></div>
+                <div id="note"></div>
+            </div>
         )
     }
 
@@ -22,6 +34,11 @@ export class String extends Component {
             i++;
         }
 
+        for (let i = 0; i < stringNotes.length; i++) {
+            let stringDiv = document.getElementById("note" + i);
+            let stringNote = document.createTextNode(stringNotes[i]);
+            stringDiv.appendChild(stringNote);
+        }
         return stringNotes;
     }
 }

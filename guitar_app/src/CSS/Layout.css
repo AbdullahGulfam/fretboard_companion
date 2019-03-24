@@ -1,7 +1,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
 }
 
 .main {
@@ -34,14 +33,14 @@ h1 {
 	z-index: 1;
 }
 
-li {
+.string {
 	height: 1px;
 	margin-top: 10px;
 }
-li:nth-child(2) {height: 2px;}
-li:nth-child(3) {height: 3px;}
-li:nth-child(4) {height: 4px;}
-li:nth-child(5) {height: 5px;}
-li:nth-child(6) {height: 6px;}
+.string:nth-child(2) {height: 2px;}
+.string:nth-child(3) {height: 3px;}
+.string:nth-child(4) {height: 4px;}
+.string:nth-child(5) {height: 5px;}
+.string:nth-child(6) {height: 6px;}
 
 
