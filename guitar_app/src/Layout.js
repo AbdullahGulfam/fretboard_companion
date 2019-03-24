@@ -7,7 +7,7 @@ export class Layout extends Component {
     render() {
         return (
             <div class="main">
-                <h1>Guitar Fretboard</h1>
+                <h1>Fretboard Companion</h1>
                 <Fretboard /> 
                     
                 <ul class="strings">
