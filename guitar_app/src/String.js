@@ -9,6 +9,8 @@ export class String extends Component {
     render() {
         return (
             <div class="string">
+                {}
+
                 <div id="note"></div>
                 <div id="note"></div>
                 <div id="note"></div>

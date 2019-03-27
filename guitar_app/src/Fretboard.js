@@ -12,15 +12,22 @@ export class Fretboard extends Component {
             <div></div>
             <div></div>
             <div></div>
-            <div class="dotted"></div>
-            <div></div>
-            <div class="dotted"></div>
-            <div></div>
-            <div class="dotted"></div>
-            <div></div>
-            <div class="dotted"></div>
             <div></div>
             <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <ul class="dots">
+			    <li></li>
+			    <li></li>
+			    <li></li>
+			    <li></li>
+		    </ul>
         </div>
         )
     }
