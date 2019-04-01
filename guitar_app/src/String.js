@@ -12,10 +12,10 @@ export class String extends Component {
     }
     render() {
         return (
-            <div class="string">
-                <ul class="notes">
+            <div className="string">
+                <ul className="notes">
                     {this.state.notes.map((note) => 
-                    <li class="note">{note}</li>)}
+                    <li className="note" key={note}>{note}</li>)}
                 </ul>
             </div>
         )

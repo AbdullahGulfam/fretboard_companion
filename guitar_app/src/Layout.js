@@ -6,11 +6,11 @@ import './CSS/Layout.css'
 export class Layout extends Component {
     render() {
         return (
-            <div class="main">
+            <div className="main">
                 <h1>Fretboard Companion</h1>
                 <Fretboard />    
                  
-                <div class="strings"> 
+                <div className="strings"> 
                     <String stringTuning='e'/>
                     <String stringTuning='b'/>   
                     <String stringTuning='g'/>   

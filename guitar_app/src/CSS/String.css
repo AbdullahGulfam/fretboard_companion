@@ -7,10 +7,8 @@
 
 .notes {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
-    width: 960px;
-    height: 30px;
 }
 
 .note {
@@ -19,6 +17,6 @@
     height: 30px;
     border-radius: 50%;
     background: #ffffff;
-    margin-top: -10px;
-    margin-left: -40px;
+    border: 2px solid black;
+    margin-top: -15px;
 }
