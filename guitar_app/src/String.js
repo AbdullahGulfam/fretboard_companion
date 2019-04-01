@@ -5,25 +5,24 @@ export class String extends Component {
     constructor(props)
     {
         super(props);
+
+        this.state= {
+            notes: []
+        };
     }
     render() {
         return (
             <div class="string">
-                {}
-
-                <div id="note"></div>
-                <div id="note"></div>
-                <div id="note"></div>
-                <div id="note"></div>
-                <div id="note"></div>
-                <div id="note"></div>
-                <div id="note"></div>
-                <div id="note"></div>
-                <div id="note"></div>
-                <div id="note"></div>
-                <div id="note"></div>
+                <ul class="notes">
+                    {this.state.notes.map((note) => 
+                    <li class="note">{note}</li>)}
+                </ul>
             </div>
         )
+    }
+
+    componentDidMount() {
+        this.getStringNotes();
     }
 
     getStringNotes() {
@@ -31,17 +30,11 @@ export class String extends Component {
         let stringNotes = [this.props.stringTuning];
 
         let i = notes.indexOf(this.props.stringTuning) + 1;
-        while (stringNotes.length < 11) {
+        while (stringNotes.length < 12) {
             stringNotes.push(notes[i % notes.length]);
             i++;
         }
-
-        for (let i = 0; i < stringNotes.length; i++) {
-            let stringDiv = document.getElementById("note" + i);
-            let stringNote = document.createTextNode(stringNotes[i]);
-            stringDiv.appendChild(stringNote);
-        }
-        return stringNotes;
+        this.setState({ notes: stringNotes});
     }
 }
 

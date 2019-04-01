@@ -3,12 +3,16 @@ import React, { Component } from 'react'
 export class Scale extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            notes:[]
+        };
     }
     
     render() {
         return (
             <div>
-                {this.getScaleNotes()}
+                
             </div>
         )
 
@@ -28,7 +32,7 @@ export class Scale extends Component {
             scaleList.push(notes[scaleListIndex]);
             i++;
         }
-        return scaleList;    
+        this.setState({ notes: scaleList });   
     }
 }
 export default Scale

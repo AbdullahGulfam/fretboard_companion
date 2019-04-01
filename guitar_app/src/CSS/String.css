@@ -1,20 +1,24 @@
 .string {
-    
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
 	background: #c8bb93;	
 	margin-bottom: 39px;
 	border-bottom: 2px solid #958963;
     box-sizing: border-box;
 }
 
-/*#note {
-    height: 24px;
-    width: 24px;
+.notes {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 960px;
+    height: 30px;
+}
+
+.note {
+    text-align: center;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background-color: #ffe5b5;
-    position: relative;
-    z-index: 2;
-}*/
+    background: #ffffff;
+    margin-top: -10px;
+    margin-left: -40px;
+}

@@ -8,16 +8,16 @@ export class Layout extends Component {
         return (
             <div class="main">
                 <h1>Fretboard Companion</h1>
-                <Fretboard /> 
-                    
-                <ul class="strings">
-                    <String stringTuning = 'e'/>
-                    <String stringTuning = 'a'/>
-                    <String stringTuning = 'd'/>
-                    <String stringTuning = 'g'/>
-                    <String stringTuning = 'b'/>
-                    <String stringTuning = 'e'/>
-                </ul>
+                <Fretboard />    
+                 
+                <div class="strings"> 
+                    <String stringTuning='e'/>
+                    <String stringTuning='b'/>   
+                    <String stringTuning='g'/>   
+                    <String stringTuning='d'/>   
+                    <String stringTuning='a'/>   
+                    <String stringTuning='e'/>   
+                </div>   
             </div>
         )
     }
