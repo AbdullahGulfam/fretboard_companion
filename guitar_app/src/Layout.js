@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
 import Fretboard from './Fretboard'
 import String from './String'
+import Scale from './Scale'
 import './CSS/Layout.css'
 
 export class Layout extends Component {
     render() {
         return (
-            <div class="main">
+            <div className="main">
                 <h1>Fretboard Companion</h1>
+
                 <Fretboard />    
-                 
-                <div class="strings"> 
-                    <String stringTuning='e'/>
-                    <String stringTuning='b'/>   
-                    <String stringTuning='g'/>   
-                    <String stringTuning='d'/>   
-                    <String stringTuning='a'/>   
-                    <String stringTuning='e'/>   
+
+                <div className="strings"> 
+                    <String stringTuning='e' scaleNotes={['c','d','e','f','g','a','b']}/>
+                    <String stringTuning='b' scaleNotes={['c','d','e','f','g','a','b']}/>   
+                    <String stringTuning='g' scaleNotes={['c','d','e','f','g','a','b']}/>   
+                    <String stringTuning='d' scaleNotes={['c','d','e','f','g','a','b']}/>   
+                    <String stringTuning='a' scaleNotes={['c','d','e','f','g','a','b']}/>   
+                    <String stringTuning='e' scaleNotes={['c','d','e','f','g','a','b']}/>   
                 </div>   
             </div>
         )

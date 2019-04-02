@@ -18,6 +18,10 @@ export class Scale extends Component {
 
     }
 
+    componentDidMount() {
+        this.getScaleNotes();
+    }
+
     getScaleNotes() {
         const notes = ['a','a#','b','c','c#','d','d#','e','f','f#','g','g#'];
 

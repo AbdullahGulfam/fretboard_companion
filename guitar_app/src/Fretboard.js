@@ -8,27 +8,27 @@ export class Fretboard extends Component {
 
     render() {
         return (
-        <div class="fretboard">
-            <div class="frets">
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
-                <div class="fret"></div>
+        <div className="fretboard">
+            <div className="frets">
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
+                <div className="fret"></div>
             </div>
 
-            <ul class="dots">
-			    <li class="dot"></li>
-			    <li class="dot"></li>
-			    <li class="dot"></li>
-			    <li class="dot"></li>
+            <ul className="dots">
+			    <li className="dot"></li>
+			    <li className="dot"></li>
+			    <li className="dot"></li>
+			    <li className="dot"></li>
 		    </ul>
         </div>
         )
