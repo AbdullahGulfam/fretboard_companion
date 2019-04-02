@@ -23,9 +23,13 @@ h1 {
 	margin-top: 40px;
 }
 
+.scaleName {
+	font-size: 20px;
+}
+
 .strings {
 	position: absolute;
-	margin-top: 80px;
+	margin-top: 112px;
     width: 960px;
 	height: 240px;
 	z-index: 1;

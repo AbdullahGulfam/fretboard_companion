@@ -8,8 +8,8 @@ export class Layout extends Component {
     render() {
         return (
             <div className="main">
-                <h1>Fretboard Companion</h1>
-
+                <h1 className="title">Fretboard Companion</h1>
+                <h1 className="scaleName">C Major Scale</h1>
                 <Fretboard />    
 
                 <div className="strings"> 
@@ -20,6 +20,8 @@ export class Layout extends Component {
                     <String stringTuning='a' scaleNotes={['c','d','e','f','g','a','b']}/>   
                     <String stringTuning='e' scaleNotes={['c','d','e','f','g','a','b']}/>   
                 </div>   
+
+                
             </div>
         )
     }

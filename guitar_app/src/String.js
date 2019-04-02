@@ -15,7 +15,10 @@ export class String extends Component {
         return (
             <div className="string">
                 <div>
-                    <div className="firstNote"> {this.props.stringTuning} </div>
+                    {
+                        this.props.scaleNotes.includes(this.props.stringTuning, 0) ?
+                        <div className="firstNote"> {this.props.stringTuning} </div> : <div style={{opacity: 0.0}} className="firstNote"> {this.props.stringTuning} </div>
+                    }
                 </div>
                 <ul className="notes">
                     {     
