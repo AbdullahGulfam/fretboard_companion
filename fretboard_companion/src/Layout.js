@@ -11,7 +11,6 @@ export class Layout extends Component {
                 <h1 id="title">Fretboard Companion</h1>
                 
                 <h1 id="scaleName">C Major Scale</h1>
-                <DropdownMenu />
 
                 <Fretboard />    
 
