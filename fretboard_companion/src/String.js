@@ -12,11 +12,11 @@ export class String extends Component {
     }
     render() {
         return (
-            <div id="string">
+            <div className="string">
                 <div>
                     {
                         this.props.scaleNotes.includes(this.props.stringTuning, 0) ?
-                        <div id="firstNote"> {this.props.stringTuning} </div> : <div style={{opacity: 0.0}} id="firstNote"> {this.props.stringTuning} </div>
+                        <div className="firstNote"> {this.props.stringTuning} </div> : <div style={{opacity: 0.0}} id="firstNote"> {this.props.stringTuning} </div>
                     }
                 </div>
                 <ul className="notes">

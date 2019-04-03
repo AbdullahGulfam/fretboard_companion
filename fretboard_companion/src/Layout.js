@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Fretboard from './Fretboard'
 import String from './String'
-import Menu from './Menu'
+import DropdownMenu from './DropdownMenu'
 import './CSS/Layout.css'
 
 export class Layout extends Component {
@@ -10,7 +10,9 @@ export class Layout extends Component {
             <div id="main">
                 <h1 id="title">Fretboard Companion</h1>
                 
-                {/*<h1 id="scaleName">C Major Scale</h1>
+                <h1 id="scaleName">C Major Scale</h1>
+                <DropdownMenu />
+
                 <Fretboard />    
 
                 <div id="strings"> 
@@ -20,9 +22,7 @@ export class Layout extends Component {
                     <String stringTuning='d' scaleNotes={['c','d','e','f','g','a','b']}/>   
                     <String stringTuning='a' scaleNotes={['c','d','e','f','g','a','b']}/>   
                     <String stringTuning='e' scaleNotes={['c','d','e','f','g','a','b']}/>   
-                </div> */}  
-
-                
+                </div> 
             </div>
         )
     }
