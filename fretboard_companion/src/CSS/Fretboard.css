@@ -1,4 +1,4 @@
-.fretboard {
+#fretboard {
     position: relative;
 	margin-top: 80px;
     width: 960px;
@@ -6,7 +6,7 @@
     background-color: #663300;
 }
 
-.frets {
+#frets {
     display: flex;
     justify-content: space-between;
 }
@@ -27,7 +27,7 @@
     
 }
 
-.dots {
+#dots {
     position: absolute;
     list-style: none;
     width: 960px;

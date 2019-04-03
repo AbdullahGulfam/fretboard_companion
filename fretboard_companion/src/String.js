@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './CSS/String.css'
-import Scale from './Scale'
 
 export class String extends Component {
     constructor(props)
@@ -13,11 +12,11 @@ export class String extends Component {
     }
     render() {
         return (
-            <div className="string">
+            <div id="string">
                 <div>
                     {
                         this.props.scaleNotes.includes(this.props.stringTuning, 0) ?
-                        <div className="firstNote"> {this.props.stringTuning} </div> : <div style={{opacity: 0.0}} className="firstNote"> {this.props.stringTuning} </div>
+                        <div id="firstNote"> {this.props.stringTuning} </div> : <div style={{opacity: 0.0}} id="firstNote"> {this.props.stringTuning} </div>
                     }
                 </div>
                 <ul className="notes">

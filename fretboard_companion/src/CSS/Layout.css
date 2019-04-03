@@ -3,7 +3,7 @@
 	padding: 0;
 }
 
-.main {
+#main {
     display: flex; 
     flex-direction: column;
     align-items: center; 
@@ -23,11 +23,11 @@ h1 {
 	margin-top: 40px;
 }
 
-.scaleName {
+#scaleName {
 	font-size: 20px;
 }
 
-.strings {
+#strings {
 	position: absolute;
 	margin-top: 112px;
     width: 960px;
