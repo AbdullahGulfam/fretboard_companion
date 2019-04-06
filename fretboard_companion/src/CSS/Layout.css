@@ -19,6 +19,7 @@ h1 {
 
 .scaleName {
 	font-size: 20px;
+	margin-top: 40px !important;
 }
 
 .strings {
@@ -26,17 +27,18 @@ h1 {
 	align-items: center;
 	flex-wrap: wrap;
 	justify-content: center;
-	height: 200px;
+	height: 240px;
 	padding: 0 !important;
 	margin-top: 100px;
 }
 
 .note {
+    position: absolute;
+    margin-top: -15px;
 }
-
 .fretboard-container {
 	position: absolute;
-	margin-top: 90px;
+	margin-top: 93px;
 }
 
 
