@@ -6,7 +6,7 @@ export class Fretboard extends Component {
   render() {
     return (
       <Container className="fretboard-container">
-        <Row>
+        <Row className="fretboard">
           <Col className="fret first" />
           <Col className="fret" />
           <Col className="fret" />

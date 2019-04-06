@@ -28,6 +28,15 @@ h1 {
 	justify-content: center;
 	height: 200px;
 	padding: 0 !important;
+	margin-top: 100px;
+}
+
+.note {
+}
+
+.fretboard-container {
+	position: absolute;
+	margin-top: 90px;
 }
 
 
