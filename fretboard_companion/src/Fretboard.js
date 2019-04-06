@@ -1,34 +1,36 @@
-import React, { Component } from 'react'
-import './CSS/Fretboard.css'
+import React, { Component } from "react";
+import "./CSS/Fretboard.css";
+import { Container, Col, Row } from "reactstrap";
 
 export class Fretboard extends Component {
-    render() {
-        return (
-        <div id="fretboard">
-            <div id="frets">
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-                <div className="fret"></div>
-            </div>
-
-            <ul id="dots">
-			    <li className="dot"></li>
-			    <li className="dot"></li>
-			    <li className="dot"></li>
-			    <li className="dot"></li>
-		    </ul>
-        </div>
-        )
-    }
+  render() {
+    return (
+      <Container className="fretboard-container">
+        <Row>
+          <Col className="fret first" />
+          <Col className="fret" />
+          <Col className="fret" />
+          <Col className="fret">
+            <div className="dot" />
+          </Col>
+          <Col className="fret" />
+          <Col className="fret">
+            <div className="dot" />
+          </Col>
+          <Col className="fret" />
+          <Col className="fret">
+            <div className="dot" />
+          </Col>
+          <Col className="fret" />
+          <Col className="fret">
+            <div className="dot" />
+          </Col>
+          <Col className="fret" />
+          <Col className="fret" />
+        </Row>
+      </Container>
+    );
+  }
 }
 
-export default Fretboard
+export default Fretboard;

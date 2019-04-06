@@ -1,48 +1,35 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
-#main {
+.main {
     display: flex; 
     flex-direction: column;
     align-items: center; 
 	justify-content: center;
-	margin-top: 40px;
 }
 
 body {
-	background: #e5ffe5;
-	font-family: 'Arial', sans-serif;
+	background-color: #e5ffe5 !important;
 	letter-spacing: 4px;
+	
 }
 
 h1 {
 	text-transform: uppercase;
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 40px !important;
 }
 
-#scaleName {
+.scaleName {
 	font-size: 20px;
 }
 
-#strings {
-	position: absolute;
-	margin-top: 112px;
-    width: 960px;
-	height: 240px;
-	z-index: 1;
+.strings {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: 200px;
+	padding: 0 !important;
 }
 
-.string {
-	height: 1px;
-	margin-top: 10px;
-}
-.string:nth-child(2) {height: 2px;}
-.string:nth-child(3) {height: 3px;}
-.string:nth-child(4) {height: 4px;}
-.string:nth-child(5) {height: 5px;}
-.string:nth-child(6) {height: 6px;}
+
 
 
