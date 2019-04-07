@@ -11,9 +11,11 @@ export class ScaleDropdown extends Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.changeText = this.changeText.bind(this);
 
     this.state = {
       dropdownOpen: false,
+      dropdownText: "Scale Type",
       scales: ["Major", "Minor Natural", "Minor Harmonic", "Minor Melodic"]
     };
   }
@@ -23,6 +25,12 @@ export class ScaleDropdown extends Component {
       dropdownOpen: !prevState.dropdownOpen
     }));
   }
+
+  changeText = scale => {
+    this.setState({
+      dropdownText: scale.currentTarget.textContent
+    });
+  };
 
   render() {
     return (
@@ -34,20 +42,25 @@ export class ScaleDropdown extends Component {
           size="lg"
         >
           <DropdownToggle
+            caret
             style={{
               backgroundColor: "#663300",
               border: "#663300",
-              color: "white"
+              color: "white",
+              height: "50px",
+              width: "200px"
             }}
           >
             {" "}
-            Scale Type{" "}
+            {this.state.dropdownText}{" "}
           </DropdownToggle>
 
           <DropdownMenu>
-            {this.state.scales.map(scale => (
-              <DropdownItem>{scale}</DropdownItem>
-            ))}
+            {this.state.scales.map(scale => {
+              return (
+                <DropdownItem onClick={this.changeText}>{scale}</DropdownItem>
+              );
+            })}
           </DropdownMenu>
         </Dropdown>
       </div>

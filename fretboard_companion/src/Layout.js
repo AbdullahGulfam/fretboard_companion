@@ -4,49 +4,63 @@ import String from "./String";
 import NoteDropdown from "./NoteDropdown";
 import ScaleDropdown from "./ScaleDropdown";
 import "./CSS/Layout.css";
-import { Container } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
 export class Layout extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scaleRoot: "",
+      scaleStruct: []
+    };
+  }
   render() {
     return (
       <div className="main">
         <h1 className="title">Fretboard Companion</h1>
-        <h1 className="scaleName">C Major Scale</h1>
-        <NoteDropdown />
-        <ScaleDropdown />
-        {/*<Fretboard />
+        <Container className="dropdowns">
+          <Row>
+            <Col>
+              <NoteDropdown />
+            </Col>
+            <Col>
+              <ScaleDropdown />
+            </Col>
+          </Row>
+        </Container>
+        <Fretboard />
         <Container className="strings">
           <String
             stringTuning="e"
-            scaleRoot="c"
-            scaleStruct={[2, 2, 1, 2, 2, 2]}
+            scaleRoot={this.state.scaleRoot}
+            scaleStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="b"
-            scaleRoot="c"
-            scaleStruct={[2, 2, 1, 2, 2, 2]}
+            scaleRoot={this.state.scaleRoot}
+            scaleStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="g"
-            scaleRoot="c"
-            scaleStruct={[2, 2, 1, 2, 2, 2]}
+            scaleRoot={this.state.scaleRoot}
+            scaleStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="d"
-            scaleRoot="c"
-            scaleStruct={[2, 2, 1, 2, 2, 2]}
+            scaleRoot={this.state.scaleRoot}
+            scaleStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="a"
-            scaleRoot="c"
-            scaleStruct={[2, 2, 1, 2, 2, 2]}
+            scaleRoot={this.state.scaleRoot}
+            scaleStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="e"
-            scaleRoot="c"
-            scaleStruct={[2, 2, 1, 2, 2, 2]}
+            scaleRoot={this.state.scaleRoot}
+            scaleStruct={this.state.scaleStruct}
           />
-        </Container>*/}
+        </Container>
       </div>
     );
   }

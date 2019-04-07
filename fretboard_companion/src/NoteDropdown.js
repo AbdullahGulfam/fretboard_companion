@@ -11,10 +11,12 @@ export class NoteDropdown extends Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.changeText = this.changeText.bind(this);
 
     this.state = {
       dropdownOpen: false,
-      notes: ["a", "a#", "b", "c", "c#", "d", "d#", "e", "f", "f#", "g", "g#"]
+      dropdownText: "Scale Root Note",
+      notes: ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
     };
   }
 
@@ -23,6 +25,12 @@ export class NoteDropdown extends Component {
       dropdownOpen: !prevState.dropdownOpen
     }));
   }
+
+  changeText = note => {
+    this.setState({
+      dropdownText: note.currentTarget.textContent
+    });
+  };
 
   render() {
     return (
@@ -34,20 +42,25 @@ export class NoteDropdown extends Component {
           size="lg"
         >
           <DropdownToggle
+            caret
             style={{
               backgroundColor: "#663300",
               border: "#663300",
-              color: "white"
+              color: "white",
+              height: "50px",
+              width: "200px"
             }}
           >
             {" "}
-            Scale Root Note{" "}
+            {this.state.dropdownText}{" "}
           </DropdownToggle>
 
           <DropdownMenu>
-            {this.state.notes.map(note => (
-              <DropdownItem>{note}</DropdownItem>
-            ))}
+            {this.state.notes.map(note => {
+              return (
+                <DropdownItem onClick={this.changeText}>{note}</DropdownItem>
+              );
+            })}
           </DropdownMenu>
         </Dropdown>
       </div>
