@@ -1,27 +1,27 @@
 .fretboard-container {
-    padding-top: 80px;
-    position: relative;
+  padding-top: 80px;
+  position: relative;
 }
 
 .fret {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #663300;
-    border: solid 2px silver;
-    height: 240px;
-    width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #663300;
+  border: solid 2px silver;
+  height: 240px;
+  width: 80px;
 }
 
 .first {
-    background: none;
-    border: none;  
+  background: none;
+  border: none;
 }
 
 .dot {
-    margin: auto;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #000000;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000000;
 }

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Fretboard from "./Fretboard";
 import String from "./String";
+import NoteDropdown from "./NoteDropdown";
+import ScaleDropdown from "./ScaleDropdown";
 import "./CSS/Layout.css";
 import { Container } from "reactstrap";
 
@@ -9,9 +11,10 @@ export class Layout extends Component {
     return (
       <div className="main">
         <h1 className="title">Fretboard Companion</h1>
-
         <h1 className="scaleName">C Major Scale</h1>
-        <Fretboard />
+        <NoteDropdown />
+        <ScaleDropdown />
+        {/*<Fretboard />
         <Container className="strings">
           <String
             stringTuning="e"
@@ -43,7 +46,7 @@ export class Layout extends Component {
             scaleRoot="c"
             scaleStruct={[2, 2, 1, 2, 2, 2]}
           />
-        </Container>
+        </Container>*/}
       </div>
     );
   }

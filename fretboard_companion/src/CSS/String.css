@@ -1,19 +1,13 @@
 .string {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: #c8bb93;
-    border-bottom: 2px solid #958963;
-    position: relative
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #c8bb93;
+  border-bottom: 2px solid #958963;
+  position: relative;
 }
 
 .open {
-    background: none;
-    border-bottom: none;
+  background: none;
+  border-bottom: none;
 }
-
-
-
-
-
-

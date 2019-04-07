@@ -1,46 +1,41 @@
 .main {
-    display: flex; 
-    flex-direction: column;
-    align-items: center; 
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 body {
-	background-color: #e5ffe5 !important;
-	letter-spacing: 4px;
-	
+  background-color: #e5ffe5 !important;
+  letter-spacing: 4px;
 }
 
 h1 {
-	text-transform: uppercase;
-	text-align: center;
-	margin-top: 40px !important;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 40px !important;
 }
 
 .scaleName {
-	font-size: 20px;
-	margin-top: 40px !important;
+  font-size: 20px;
+  margin-top: 40px !important;
 }
 
 .strings {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: center;
-	height: 240px;
-	padding: 0 !important;
-	margin-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 240px;
+  padding: 0 !important;
+  margin-top: 100px;
 }
 
 .note {
-    position: absolute;
-    margin-top: -15px;
+  position: absolute;
+  margin-top: -15px;
 }
 .fretboard-container {
-	position: absolute;
-	margin-top: 93px;
+  position: absolute;
+  margin-top: 93px;
 }
-
-
-
-
