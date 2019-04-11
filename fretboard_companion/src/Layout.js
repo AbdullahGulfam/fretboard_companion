@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Fretboard from "./Fretboard";
 import String from "./String";
-import NoteDropdown from "./NoteDropdown";
-import ScaleDropdown from "./ScaleDropdown";
+import CustomDropdown from "./CustomDropdown";
 import "./CSS/Layout.css";
 import { Container, Row, Col } from "reactstrap";
 
@@ -21,10 +20,10 @@ export class Layout extends Component {
         <Container className="dropdowns">
           <Row>
             <Col>
-              <NoteDropdown />
+              <CustomDropdown title="Scale Root Note" options={["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]}/>
             </Col>
             <Col>
-              <ScaleDropdown />
+              <CustomDropdown title="Scale Type"options={["Major", "Minor Natural", "Minor Harmonic", "Minor Melodic"]}/>
             </Col>
           </Row>
         </Container>

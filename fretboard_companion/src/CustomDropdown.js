@@ -6,7 +6,7 @@ import {
   DropdownItem
 } from "reactstrap";
 
-export class NoteDropdown extends Component {
+export class CustomDropdown extends Component {
   constructor(props) {
     super(props);
 
@@ -15,8 +15,8 @@ export class NoteDropdown extends Component {
 
     this.state = {
       dropdownOpen: false,
-      dropdownText: "Scale Root Note",
-      notes: ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
+      dropdownTitle: props.title,
+      dropdownOptions: props.options
     };
   }
 
@@ -26,15 +26,15 @@ export class NoteDropdown extends Component {
     }));
   }
 
-  changeText = note => {
+  changeText = option => {
     this.setState({
-      dropdownText: note.currentTarget.textContent
+      dropdownTitle: option.currentTarget.textContent
     });
   };
 
   render() {
     return (
-      <div className="notedropdown">
+      <div className="customdropdown">
         <Dropdown
           style={{ border: "#663300" }}
           isOpen={this.state.dropdownOpen}
@@ -52,13 +52,13 @@ export class NoteDropdown extends Component {
             }}
           >
             {" "}
-            {this.state.dropdownText}{" "}
+            {this.state.dropdownTitle}{" "}
           </DropdownToggle>
 
           <DropdownMenu>
-            {this.state.notes.map(note => {
+            {this.state.dropdownOptions.map(option => {
               return (
-                <DropdownItem onClick={this.changeText}>{note}</DropdownItem>
+                <DropdownItem onClick={this.changeText}>{option}</DropdownItem>
               );
             })}
           </DropdownMenu>
@@ -68,4 +68,4 @@ export class NoteDropdown extends Component {
   }
 }
 
-export default NoteDropdown;
+export default CustomDropdown;
