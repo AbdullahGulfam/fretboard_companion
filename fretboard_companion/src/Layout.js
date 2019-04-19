@@ -51,14 +51,12 @@ export class Layout extends Component {
             <Col>
               <CustomDropdown
                 title="Scale Type"
-                options={
-                  new Map([
-                    ["Major", [2, 2, 1, 2, 2, 2]],
-                    ["Minor Natural", [2, 1, 2, 2, 1, 2]],
-                    ["Minor Harmonic", [2, 1, 2, 2, 3, 1]],
-                    ["Minor Melodic", [2, 1, 2, 2, 2, 2]]
-                  ])
-                }
+                options={[
+                  ["Major", [2, 2, 1, 2, 2, 2]],
+                  ["Minor Natural", [2, 1, 2, 2, 1, 2]],
+                  ["Minor Harmonic", [2, 1, 2, 2, 3, 1]],
+                  ["Minor Melodic", [2, 1, 2, 2, 2, 2]]
+                ]}
               />
             </Col>
           </Row>
