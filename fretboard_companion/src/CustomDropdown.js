@@ -11,12 +11,13 @@ export class CustomDropdown extends Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
-    this.changeText = this.changeText.bind(this);
+    this.update = this.update.bind(this);
 
     this.state = {
       dropdownOpen: false,
-      dropdownTitle: props.title,
-      dropdownOptions: props.options
+      dropdownOptions: props.options,
+      dropdownText: props.title,
+      dropdownValue: []
     };
   }
 
@@ -26,9 +27,10 @@ export class CustomDropdown extends Component {
     }));
   }
 
-  changeText = option => {
+  update = option => {
     this.setState({
-      dropdownTitle: option.currentTarget.textContent
+      dropdownText: option.currentTarget.textContent,
+      dropdownValue: option.currentTarget.key
     });
   };
 
@@ -52,15 +54,14 @@ export class CustomDropdown extends Component {
             }}
           >
             {" "}
-            {this.state.dropdownTitle}{" "}
+            {this.state.dropdownText}{" "}
           </DropdownToggle>
 
           <DropdownMenu>
-            {this.state.dropdownOptions.map(option => {
-              return (
-                <DropdownItem onClick={this.changeText}>{option}</DropdownItem>
-              );
-            })}
+            {/*this.state.dropdownOptions.map(([key, value]) => {
+              return <DropdownItem onClick={this.update}>{value}</DropdownItem>;
+            })*/}
+            {console.log(this.props.options)}
           </DropdownMenu>
         </Dropdown>
       </div>
