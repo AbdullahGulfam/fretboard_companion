@@ -6,11 +6,6 @@ import Note from "./Note";
 export class String extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      notesString: [],
-      notesScale: []
-    };
   }
 
   render() {
@@ -20,24 +15,19 @@ export class String extends Component {
           <Col className="string open">
             <Note noteName={this.props.stringTuning} />
           </Col>
-          {this.state.notesString.map(note =>
-            this.state.notesScale.includes(note, 0) ? (
-              <Col className="string">
+          {this.getStringNotes().map(note =>
+            this.getScaleNotes().includes(note, 0) ? (
+              <Col className="string" key={note}>
                 {" "}
                 <Note noteName={note} />
               </Col>
             ) : (
-              <Col className="string" />
+              <Col className="string" key={note} />
             )
           )}
         </Row>
       </Container>
     );
-  }
-
-  componentDidMount() {
-    this.getScaleNotes();
-    this.getStringNotes();
   }
 
   getScaleNotes() {
@@ -56,18 +46,16 @@ export class String extends Component {
       "g#"
     ];
 
-    let scale = [this.props.scaleRoot];
-    let scaleIndex = notes.indexOf(this.props.scaleRoot);
-    let i = 0;
-    while (i < 6) {
-      scaleIndex += this.props.scaleStruct[i];
+    let scale = [];
+    let scaleIndex = notes.indexOf(this.props.stringRoot);
+    for (let i = 0; i < 7; i++) {
       if (scaleIndex >= notes.length) {
         scaleIndex = scaleIndex % notes.length;
       }
       scale.push(notes[scaleIndex]);
-      i++;
+      scaleIndex += this.props.stringStruct[i];
     }
-    this.setState({ notesScale: scale });
+    return scale;
   }
 
   getStringNotes() {
@@ -91,7 +79,7 @@ export class String extends Component {
       string.push(notes[i % notes.length]);
       i++;
     }
-    this.setState({ notesString: string });
+    return string;
   }
 }
 export default String;

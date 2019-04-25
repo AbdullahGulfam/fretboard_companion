@@ -27,12 +27,12 @@ export class CustomDropdown extends Component {
     }));
   }
 
-  update = option => {
+  update(option) {
     this.setState({
       dropdownText: option.currentTarget.textContent,
       dropdownValue: option.currentTarget.value
     });
-  };
+  }
 
   render() {
     return (
@@ -60,7 +60,14 @@ export class CustomDropdown extends Component {
           <DropdownMenu>
             {this.state.dropdownOptions.map(([key, value]) => {
               return (
-                <DropdownItem value={value} onClick={this.update}>
+                <DropdownItem
+                  key={key}
+                  value={value}
+                  onClick={option => {
+                    this.update(option);
+                    this.props.updateParent(value);
+                  }}
+                >
                   {key}
                 </DropdownItem>
               );

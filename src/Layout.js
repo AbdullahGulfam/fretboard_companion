@@ -8,18 +8,24 @@ export class Layout extends Component {
   constructor(props) {
     super(props);
 
-    this.update = this.update.bind(this);
+    this.updateRoot = this.updateRoot.bind(this);
+    this.updateStruct = this.updateStruct.bind(this);
 
     this.state = {
       scaleRoot: "",
-      scaleStruct: []
+      scaleStruct: [0, 0, 0, 0, 0, 0]
     };
   }
 
-  update() {
+  updateRoot(value) {
     this.setState({
-      scaleRoot: "",
-      scaleStruct: ""
+      scaleRoot: value
+    });
+  }
+
+  updateStruct(value) {
+    this.setState({
+      scaleStruct: value
     });
   }
 
@@ -29,27 +35,29 @@ export class Layout extends Component {
         <h1 className="title">Fretboard Companion</h1>
         <Container className="dropdowns">
           <Row>
-            {/*<Col>
-              <CustomDropdown
-                title="Scale Root Note"
-                options={[
-                  "A",
-                  "A#",
-                  "B",
-                  "C",
-                  "C#",
-                  "D",
-                  "D#",
-                  "E",
-                  "F",
-                  "F#",
-                  "G",
-                  "G#"
-                ]}
-              />
-              </Col>*/}
             <Col>
               <CustomDropdown
+                updateParent={this.updateRoot.bind(this)}
+                title="Scale Root Note"
+                options={[
+                  ["A", "a"],
+                  ["A#", "a#"],
+                  ["B", "b"],
+                  ["C", "c"],
+                  ["C#", "c#"],
+                  ["D", "d"],
+                  ["D#", "d#"],
+                  ["E", "e"],
+                  ["F", "f"],
+                  ["F#", "f#"],
+                  ["G", "g"],
+                  ["G#", "g#"]
+                ]}
+              />
+            </Col>
+            <Col>
+              <CustomDropdown
+                updateParent={this.updateStruct.bind(this)}
                 title="Scale Type"
                 options={[
                   ["Major", [2, 2, 1, 2, 2, 2]],
@@ -65,33 +73,33 @@ export class Layout extends Component {
         <Container className="strings">
           <String
             stringTuning="e"
-            scaleRoot={this.state.scaleRoot}
-            scaleStruct={this.state.scaleStruct}
+            stringRoot={this.state.scaleRoot}
+            stringStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="b"
-            scaleRoot={this.state.scaleRoot}
-            scaleStruct={this.state.scaleStruct}
+            stringRoot={this.state.scaleRoot}
+            stringStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="g"
-            scaleRoot={this.state.scaleRoot}
-            scaleStruct={this.state.scaleStruct}
+            stringRoot={this.state.scaleRoot}
+            stringStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="d"
-            scaleRoot={this.state.scaleRoot}
-            scaleStruct={this.state.scaleStruct}
+            stringRoot={this.state.scaleRoot}
+            stringStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="a"
-            scaleRoot={this.state.scaleRoot}
-            scaleStruct={this.state.scaleStruct}
+            stringRoot={this.state.scaleRoot}
+            stringStruct={this.state.scaleStruct}
           />
           <String
             stringTuning="e"
-            scaleRoot={this.state.scaleRoot}
-            scaleStruct={this.state.scaleStruct}
+            stringRoot={this.state.scaleRoot}
+            stringStruct={this.state.scaleStruct}
           />
         </Container>
       </div>
