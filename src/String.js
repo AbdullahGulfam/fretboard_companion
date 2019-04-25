@@ -13,7 +13,14 @@ export class String extends Component {
       <Container className="string-container">
         <Row className="string-row">
           <Col className="string open">
-            <Note noteName={this.props.stringTuning} />
+            {this.getScaleNotes().includes(this.props.stringTuning, 0) ? (
+              <Note
+                key={this.props.stringTuningote}
+                noteName={this.props.stringTuning}
+              />
+            ) : (
+              <div />
+            )}
           </Col>
           {this.getStringNotes().map(note =>
             this.getScaleNotes().includes(note, 0) ? (
