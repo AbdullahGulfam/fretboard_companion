@@ -13,7 +13,7 @@ export class Layout extends Component {
 
     this.state = {
       scaleRoot: "",
-      scaleStruct: [0, 0, 0, 0, 0, 0]
+      scaleStruct: []
     };
   }
 
@@ -40,6 +40,7 @@ export class Layout extends Component {
                 updateParent={this.updateRoot.bind(this)}
                 title="Scale Root Note"
                 options={[
+                  ["Scale Root Note", ""],
                   ["A", "a"],
                   ["A#", "a#"],
                   ["B", "b"],
@@ -60,6 +61,7 @@ export class Layout extends Component {
                 updateParent={this.updateStruct.bind(this)}
                 title="Scale Type"
                 options={[
+                  ["Scale Type", []],
                   ["Major", [2, 2, 1, 2, 2, 2]],
                   ["Minor Natural", [2, 1, 2, 2, 1, 2]],
                   ["Minor Harmonic", [2, 1, 2, 2, 3, 1]],
