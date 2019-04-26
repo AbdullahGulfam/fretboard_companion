@@ -14,10 +14,7 @@ export class String extends Component {
         <Row className="string-row">
           <Col className="string open">
             {this.getScaleNotes().includes(this.props.stringTuning, 0) ? (
-              <Note
-                key={this.props.stringTuningote}
-                noteName={this.props.stringTuning}
-              />
+              <Note noteName={this.props.stringTuning} />
             ) : (
               <div />
             )}
@@ -39,18 +36,18 @@ export class String extends Component {
 
   getScaleNotes() {
     const notes = [
-      "a",
-      "a#",
-      "b",
-      "c",
-      "c#",
-      "d",
-      "d#",
-      "e",
-      "f",
-      "f#",
-      "g",
-      "g#"
+      "A",
+      "A#",
+      "B",
+      "C",
+      "C#",
+      "D",
+      "D#",
+      "E",
+      "F",
+      "F#",
+      "G",
+      "G#"
     ];
 
     let scale = [];
@@ -67,18 +64,18 @@ export class String extends Component {
 
   getStringNotes() {
     const notes = [
-      "a",
-      "a#",
-      "b",
-      "c",
-      "c#",
-      "d",
-      "d#",
-      "e",
-      "f",
-      "f#",
-      "g",
-      "g#"
+      "A",
+      "A#",
+      "B",
+      "C",
+      "C#",
+      "D",
+      "D#",
+      "E",
+      "F",
+      "F#",
+      "G",
+      "G#"
     ];
     let string = [];
     let i = notes.indexOf(this.props.stringTuning) + 1;

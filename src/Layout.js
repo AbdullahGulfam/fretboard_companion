@@ -41,18 +41,18 @@ export class Layout extends Component {
                 title="Scale Root Note"
                 options={[
                   ["Scale Root Note", ""],
-                  ["A", "a"],
-                  ["A#", "a#"],
-                  ["B", "b"],
-                  ["C", "c"],
-                  ["C#", "c#"],
-                  ["D", "d"],
-                  ["D#", "d#"],
-                  ["E", "e"],
-                  ["F", "f"],
-                  ["F#", "f#"],
-                  ["G", "g"],
-                  ["G#", "g#"]
+                  ["A", "A"],
+                  ["A#", "A#"],
+                  ["B", "B"],
+                  ["C", "C"],
+                  ["C#", "C#"],
+                  ["D", "D"],
+                  ["D#", "D#"],
+                  ["E", "E"],
+                  ["F", "F"],
+                  ["F#", "F#"],
+                  ["G", "G"],
+                  ["G#", "G#"]
                 ]}
               />
             </Col>
@@ -64,7 +64,7 @@ export class Layout extends Component {
                   ["Scale Type", []],
                   ["Major", [2, 2, 1, 2, 2, 2]],
                   ["Minor Natural", [2, 1, 2, 2, 1, 2]],
-                  ["Minor Harmonic", [2, 1, 2, 2, 3, 1]],
+                  ["Minor Harmonic", [2, 1, 2, 2, 1, 3]],
                   ["Minor Melodic", [2, 1, 2, 2, 2, 2]]
                 ]}
               />
@@ -74,32 +74,32 @@ export class Layout extends Component {
         <Fretboard />
         <Container className="strings">
           <String
-            stringTuning="e"
+            stringTuning="E"
             stringRoot={this.state.scaleRoot}
             stringStruct={this.state.scaleStruct}
           />
           <String
-            stringTuning="b"
+            stringTuning="B"
             stringRoot={this.state.scaleRoot}
             stringStruct={this.state.scaleStruct}
           />
           <String
-            stringTuning="g"
+            stringTuning="G"
             stringRoot={this.state.scaleRoot}
             stringStruct={this.state.scaleStruct}
           />
           <String
-            stringTuning="d"
+            stringTuning="D"
             stringRoot={this.state.scaleRoot}
             stringStruct={this.state.scaleStruct}
           />
           <String
-            stringTuning="a"
+            stringTuning="A"
             stringRoot={this.state.scaleRoot}
             stringStruct={this.state.scaleStruct}
           />
           <String
-            stringTuning="e"
+            stringTuning="E"
             stringRoot={this.state.scaleRoot}
             stringStruct={this.state.scaleStruct}
           />
