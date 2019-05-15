@@ -22,9 +22,9 @@ export class CustomDropdown extends Component {
   }
 
   toggle() {
-    this.setState(prevState => ({
-      dropdownOpen: !prevState.dropdownOpen
-    }));
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
   }
 
   update(option) {

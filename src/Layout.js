@@ -64,8 +64,7 @@ export class Layout extends Component {
                   ["Scale Type", []],
                   ["Major", [2, 2, 1, 2, 2, 2]],
                   ["Minor Natural", [2, 1, 2, 2, 1, 2]],
-                  ["Minor Harmonic", [2, 1, 2, 2, 1, 3]],
-                  ["Minor Melodic", [2, 1, 2, 2, 2, 2]]
+                  ["Minor Harmonic", [2, 1, 2, 2, 1, 3]]
                 ]}
               />
             </Col>

@@ -7,20 +7,20 @@
 
 body {
   background-color: #e5ffe5 !important;
-  letter-spacing: 4px;
 }
 
 h1 {
   text-transform: uppercase;
   text-align: center;
-  margin-top: 40px !important;
+  padding-top: 40px !important;
+  letter-spacing: 4px;
 }
 
 .dropdowns {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .strings {
@@ -37,6 +37,7 @@ h1 {
   position: absolute;
   margin-top: -15px;
 }
+
 .fretboard-container {
   position: absolute;
   margin-top: 93px;

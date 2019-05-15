@@ -9,22 +9,46 @@ export class String extends Component {
   }
 
   render() {
+    const noteColor = {
+      background: "#ffffff"
+    };
+
+    const noteColorRoot = {
+      background: "#dcbab5"
+    };
+
     return (
       <Container className="string-container">
         <Row className="string-row">
           <Col className="string open">
             {this.getScaleNotes().includes(this.props.stringTuning, 0) ? (
-              <Note noteName={this.props.stringTuning} />
+              [
+                this.props.stringRoot == this.props.stringTuning ? (
+                  <Note
+                    noteName={this.props.stringTuning}
+                    color={noteColorRoot}
+                  />
+                ) : (
+                  <Note noteName={this.props.stringTuning} color={noteColor} />
+                )
+              ]
             ) : (
               <div />
             )}
           </Col>
           {this.getStringNotes().map(note =>
             this.getScaleNotes().includes(note, 0) ? (
-              <Col className="string" key={note}>
-                {" "}
-                <Note noteName={note} />
-              </Col>
+              [
+                this.props.stringRoot == note ? (
+                  <Col className="string" key={note}>
+                    <Note noteName={note} color={noteColorRoot} />
+                  </Col>
+                ) : (
+                  <Col className="string" key={note}>
+                    <Note noteName={note} color={noteColor} />
+                  </Col>
+                )
+              ]
             ) : (
               <Col className="string" key={note} />
             )
@@ -51,14 +75,17 @@ export class String extends Component {
     ];
 
     let scale = [];
-    let scaleIndex = notes.indexOf(this.props.stringRoot);
-    for (let i = 0; i < 7; i++) {
-      if (scaleIndex >= notes.length) {
-        scaleIndex = scaleIndex % notes.length;
+    if (this.props.stringRoot !== "") {
+      let scaleIndex = notes.indexOf(this.props.stringRoot);
+      for (let i = 0; i < 7; i++) {
+        if (scaleIndex >= notes.length) {
+          scaleIndex = scaleIndex % notes.length;
+        }
+        scale.push(notes[scaleIndex]);
+        scaleIndex += this.props.stringStruct[i];
       }
-      scale.push(notes[scaleIndex]);
-      scaleIndex += this.props.stringStruct[i];
     }
+
     return scale;
   }
 
