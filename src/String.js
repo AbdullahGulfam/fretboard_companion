@@ -41,11 +41,21 @@ export class String extends Component {
               [
                 this.props.stringRoot == note ? (
                   <Col className="string" key={note}>
-                    <Note noteName={note} color={noteColorRoot} />
+                    <Note
+                      noteName={
+                        this.getScaleNotes().indexOf(note) + 1 + ":" + note
+                      }
+                      color={noteColorRoot}
+                    />
                   </Col>
                 ) : (
                   <Col className="string" key={note}>
-                    <Note noteName={note} color={noteColor} />
+                    <Note
+                      noteName={
+                        this.getScaleNotes().indexOf(note) + 1 + ":" + note
+                      }
+                      color={noteColor}
+                    />
                   </Col>
                 )
               ]
