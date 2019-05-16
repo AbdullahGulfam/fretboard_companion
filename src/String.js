@@ -25,11 +25,24 @@ export class String extends Component {
               [
                 this.props.stringRoot == this.props.stringTuning ? (
                   <Note
-                    noteName={this.props.stringTuning}
+                    noteName={
+                      this.getScaleNotes().indexOf(this.props.stringTuning) +
+                      1 +
+                      ":" +
+                      this.props.stringTuning
+                    }
                     color={noteColorRoot}
                   />
                 ) : (
-                  <Note noteName={this.props.stringTuning} color={noteColor} />
+                  <Note
+                    noteName={
+                      this.getScaleNotes().indexOf(this.props.stringTuning) +
+                      1 +
+                      ":" +
+                      this.props.stringTuning
+                    }
+                    color={noteColor}
+                  />
                 )
               ]
             ) : (
